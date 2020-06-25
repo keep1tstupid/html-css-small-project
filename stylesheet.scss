@@ -1,0 +1,295 @@
+@import 'style_colors';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+/* HEADER AND FOOTER */
+
+@mixin stripes($angle) {
+    background-image: linear-gradient($angle, #d3dde0 25%, #f7f2de 25%, #f7f2de 50%, #d3dde0 50%, #d3dde0 75%, #f7f2de 75%, #f7f2de 100%);
+    background-size: 66.47px 50.09px;
+}
+
+
+header {
+    //background-color: $bg-color-header;
+    display: flex;
+    width: 100%;
+    height: 250px;
+    color: $text-color;
+    text-align: center;
+    
+    @include stripes(143deg);
+}
+
+@mixin decoratedCircle($color, $position, $size) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    background-color: $color;
+    font-size: 20px;
+    left: $position;
+    top: 15px;
+}
+
+#headerHome {
+    @include decoratedCircle($home-color, 10%, 190px);
+}
+
+#headerMaterials {
+    @include decoratedCircle($mat-color, 20%, 200px);
+}
+
+#headerEureka {
+    @include decoratedCircle($eureka-color, 30%, 170px);
+}
+
+#headerSteps {
+    @include decoratedCircle($steps-color, 40%, 210px);
+}
+
+#headerJobs {
+    @include decoratedCircle($jobs-color, 50%, 130px);
+}
+
+#headerContact {
+    @include decoratedCircle($contact-color, 60%, 160px);
+}
+
+footer {
+    @include stripes(-143deg);
+
+    text-align: center;
+    padding: 10px;
+}
+
+/* FLEXBOX WITH NAV AND CONTENT SECTIONS*/
+
+.content {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+/* NAV SECTION*/
+
+nav {
+    background-color: $bg-color-nav;
+    text-align: left;
+    flex: 1 !important;
+    order: 0;
+}
+
+.navitem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #000000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 37px;
+}
+
+nav li {
+    display: block;
+    padding: 3px;
+    margin: 11px 0px;
+}
+
+@mixin decoratedNavItem($angle, $angleOnHover, $height, $color) {
+    transform: rotate($angle);
+    background-color: $color;
+    height: $height;
+
+    &:hover {
+        transform: rotate($angleOnHover);
+    }
+}
+
+#home {
+    @include decoratedNavItem(8deg, 13deg, 60px, $home-color);
+}
+
+#materials {
+    @include decoratedNavItem(-6deg, -1deg, 40px, $mat-color);
+}
+
+#eureka {
+    @include decoratedNavItem(7deg, 12deg, 50px, $eureka-color);
+}
+
+#steps {
+    @include decoratedNavItem(-10deg, -5deg, 70px, $steps-color);
+}
+
+#jobs {
+    @include decoratedNavItem(8deg, 13deg, 40px, $jobs-color);
+}
+
+#contact {
+    @include decoratedNavItem(-12deg, -7deg, 30px, $contact-color);
+}
+
+
+.active {
+    position: relative;
+    z-index: 1;
+    box-shadow: 14px -10px 19px 4px rgba(148,148,148,1);
+    text-decoration: underline;
+}
+
+/* CONTENT SECTION */ 
+
+section {
+    text-align: left;
+    background-color: $bg-color-content;
+    padding: 10px 52px;
+    flex: 1;
+    flex-grow: 5;
+    order: 1;
+}
+
+/* MATERIALS */
+
+.sourse {
+    display: flex;
+    padding: 10px;
+}
+
+.text {
+    position: relative;
+    float: left;
+    padding-right: 15px;
+  }
+/* NEXT STEPS PAGE */
+
+.pic {
+    position: relative;
+    min-width: 200px;
+
+    p {
+        font-size: 10px;
+    }
+}
+
+.picpic {
+    width: 100%;   
+   }
+
+/* JOBS GRID CONTAINER */
+
+.grid-jobs {
+    display: grid;
+    grid-template-columns: auto auto ;
+}
+
+.job {
+    border: 1px solid black;
+    padding-left: 15px;
+    min-width: 100px;
+    text-align: left;
+}
+
+
+/* CONTACT FORM*/
+
+.comment {
+    display: block;
+    position: relative;
+}
+
+.message {
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+    width: 390px;
+    max-width: 500px;
+}
+
+.textarea {
+    width: auto;
+}
+
+.button {
+    display: block;
+    background-color: $contact-color;
+    color: $text-color;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 18px;
+    margin: 4px 2px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.sm {
+    margin-bottom: 20px;
+}
+
+/* SM ICONS */
+
+.icon {
+    background: $contact-color;
+    color: $text-color;
+    font-size: 30px !important;
+    width: 50px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+/* BANNER PANNEL*/
+
+aside {
+    background-color: $bg-color-nav;
+    text-align: left;
+    flex: 1 !important;
+    flex-wrap: wrap;
+    order: 2;
+}
+
+.banner {
+    position: relative;
+    float: left; 
+    margin: 5px;
+    min-width: 145px;
+  }
+
+.bnr_img {
+    width: 100%;
+}
+
+/* RESIZING FOR SMALL WIDTH */
+
+@media (max-width: 700px) {
+    .content { flex-direction: column;}
+    nav ul { display: inline-flex }
+    nav li {margin-right: 10px;}
+} 
+
+@media (min-width: 700px) {
+    nav, aside { min-width: 150px ;}
+}

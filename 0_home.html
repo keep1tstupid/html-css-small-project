@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1 id="headerHome">Home page</h1>
+    </header>
+
+    <div class="content">
+
+        <nav>
+            <ul>
+                <li id="home" class="active"><a class="navitem" href="0_home.html">Home</a></li>
+                <li id="materials"><a class="navitem" href="1_materials.html">Materials</a></li>
+                <li id="eureka"><a class="navitem" href="2_eureka.html">Eureka</a></li>
+                <li id="steps"><a class="navitem" href="3_steps.html">Next steps</a></li>
+                <li id="jobs"><a class="navitem" href="4_jobs.html">Jobs</a></li>
+                <li id="contact"><a class="navitem" href="5_contact.html">Contact me</a></li>
+            </ul>
+        </nav>
+
+        <section>
+
+            <h2>Welcome to my personal Web Site project :)</h2>
+
+            <h2>Note: some personal info was replaced with Lorem Ipsum!</h2>
+
+            <h3>Here you hopefully can find more or less useful information about programming.</h3>
+
+            <p>In the Haaga-Helia University of Applied Sciences according to Orientation to Digital Services course
+                programme, every student should present his/her individual web-project about programming. I hope you
+                will have a nice time checking my work. We had two files with guidelines to follow, but also short
+                version is available in our Moodle system. Below you can find these guidelines and my short
+                explanations: how my project meets them. </p>
+
+            <h3>There are no strict rules, what is very important and what is not. Some simple rule of thumb:</h3>
+            <ol>
+                <li>MOST IMPORTANT: HTML and CSS validity, your code is readable and logical</li>
+                <li>Different layouts</li>
+                <li>Semantics: your code is machine-readable.</li>
+                <li>Usability: your site is readable and logical to navigate.</li>
+                <li>Content: your text and pictures are logical to understand.</li>
+                <li>LEAST IMPORTANT: Colors, Fonts, Fancy graphics, Animations, JavaScript.</li>
+            </ol>
+
+            <h4>1. HTML and CSS validity</h4>
+            <p> You can use links from the footer to make sure that everything is fine! Validators are available on
+                every page. Unfortunately links work only with university environment. </p>
+
+            <h4>2. Different layouts</h4>
+            <p>Firstly in my project, I used just normal CSS for "Home page" & "Materials", grid layout for "Eureka"
+                & "Next steps" pages and flexbox layout for "Jobs" and "Contact" pages. After the first teachers
+                review all pages were linked to flex-layout (to make it look more consistent). Grid container included
+                on "Jobs" page.</p>
+
+            <h4>3. Semantics</h4>
+            <p>I tried to include semantic elements as much as possible. In my HTML files you can find
+                following elements: &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt;.
+                <br /> </p>
+
+            <h4>4. Usability</h4>
+            <p>I tried to make navigation obvious (selected menu item is highlighted, page title in the header),
+                content understandable and well-structured. Firstly I made my colour-scheme minimal and design
+                simple. After completing layout fixes, I changed the design and brought more fun. :) </p>
+
+            <h4>5. Content</h4>
+            <p>All content structure was taken from requirements. Page "Contact me" is optional, there I decided
+                to create a form and different buttons. For GitHub a lot of "essay" parts removed. </p>
+
+            <h4>6. Decorations</h4>
+            <p>In the first versions, there was no decoration, grey colours (see screenshot below).
+                After that I have added colours, moving objects and striped background for header and footer.
+                All there changes implemented with SCSS and CSS strips generator.</p>
+
+            <div class="pic">
+                <img class="picpic" src="pics/old_des.png" alt="old design screenshot"/>
+                <p>old project design</p>
+            </div>
+            
+
+        </section>
+
+        <aside>
+            <div class="banner">
+                <a href="https://www.haaga-helia.fi/en/" rel="noopener noreferrer" target="_blank"><img class="bnr_img" src="banners/hh.jpg" alt="ad haaga-helia amk"/></a>
+            </div>
+            <div class="banner">
+                <a href="#" rel="noopener noreferrer" target="_blank"><img class="bnr_img" src="banners/ad.jpg" alt="ad" /></a>
+            </div>
+            <div class="banner">
+                <a href="https://www.3amk.fi/" rel="noopener noreferrer" target="_blank"><img class="bnr_img" src="banners/3amk.jpg" alt="ad 3amk"/></a>
+            </div>
+
+            <!-- <div class="banner">
+                <a href="https://  rel="noopener noreferrer" target="_blank""><img class="bnr_img" src="banners/" alt="ad"/></a>
+            </div> -->
+
+            <!-- <div class="banner">
+                <a href="https://  rel="noopener noreferrer" target="_blank""><img class="bnr_img" src="banners/" alt="ad"/></a>
+            </div> -->
+        </aside>
+
+    </div>
+        
+    <footer>
+
+            <p>Aleksandra Globa, 2020
+
+                <br />
+                <br />
+                <a href="http://validator.w3.org/check?uri=referer">
+                    <img style="border:none;height:31px;width:31px;text-decoration:none;" src="http://myy.haaga-helia.fi/~valju/ValidatorLogos/html_logo_grayscale_31.png" alt="Valid HTML" /></a>
+
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:none;width:88px;height:31px;text-decoration:none;" src="http://myy.haaga-helia.fi/~valju/ValidatorLogos/css_logo_grayscale_31.png" alt="Valid CSS" /></a>
+            </p>
+    </footer>
+</body>
+</html>
